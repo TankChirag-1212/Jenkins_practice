@@ -58,7 +58,7 @@ pipeline {
                     echo "Job Name: $jobName"
                     echo "Build Number: $buildNumber"
                 
-                withCredentials([usernamePassword(credentialsId: '1bb08ca6-f3cb-4ec7-953f-c3f7a93401ac', usernameVariable: 'DOCKER_HUB_USER', passwordVariable: 'DOCKER_HUB_PASSWORD')]) {                      
+                withCredentials([usernamePassword(credentialsId: 'd784ec34-84a6-4363-8d99-5ac8be4a8df8', usernameVariable: 'DOCKER_HUB_USER', passwordVariable: 'DOCKER_HUB_PASSWORD')]) {                      
                     sh "chmod +x ./jenkins-plugin-model/ci/04-push.sh"
                     sh "./jenkins-plugin-model/ci/04-push.sh $buildNumber"
                 }
